@@ -4,7 +4,7 @@ A neighbourhood lending community. Borrow the drill instead of buying it; lend t
 you only use twice a year. Built for the Founder Capstone.
 
 ## 🔗 Live site
-**[ADD YOUR DEPLOYED URL HERE]** — deploy to Vercel/Netlify/GitHub Pages and paste the link.
+**https://siyakhisana-capstone.vercel.app/.
 
 ## Run locally
 ```bash
