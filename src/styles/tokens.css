@@ -1,0 +1,80 @@
+/* ============================================================
+   Siyakhisana — design tokens
+   Identity: Highveld-evening indigo + marigold hustle.
+   Deliberately NOT the cream/terracotta AI-default.
+   ============================================================ */
+:root {
+  /* palette */
+  --indigo-900: #16172E;
+  --indigo-800: #1A1B3A;
+  --indigo-700: #272A55;
+  --indigo-100: #E3E4F0;
+
+  --marigold: #F5A623;
+  --marigold-dark: #D98A0B;
+  --clay: #C64B3C;
+  --green: #2D6A4F;
+  --green-soft: #E4F0EA;
+
+  --bone: #F7F4EF;
+  --bone-dark: #EBE6DC;
+  --ink: #1D1E28;
+  --muted: #6B6C7B;
+  --line: #DED9CE;
+  --white: #FFFFFF;
+
+  /* semantic */
+  --bg: var(--bone);
+  --surface: var(--white);
+  --text: var(--ink);
+  --text-soft: var(--muted);
+  --accent: var(--marigold);
+  --accent-ink: var(--indigo-900);
+
+  /* type */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+
+  /* scale */
+  --step--1: 0.833rem;
+  --step-0: 1rem;
+  --step-1: 1.2rem;
+  --step-2: 1.5rem;
+  --step-3: 2.1rem;
+  --step-4: clamp(2.4rem, 5vw, 3.6rem);
+
+  /* space + shape */
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --shadow-sm: 0 1px 2px rgba(22,23,46,.06), 0 2px 8px rgba(22,23,46,.05);
+  --shadow-md: 0 6px 24px rgba(22,23,46,.10);
+  --shadow-lg: 0 18px 50px rgba(22,23,46,.18);
+  --maxw: 1120px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  line-height: 1.55;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+h1,h2,h3,h4 { font-family: var(--font-display); font-weight: 600; line-height: 1.1; margin: 0; }
+a { color: inherit; }
+img { display: block; max-width: 100%; }
+button { font-family: inherit; cursor: pointer; }
+
+:focus-visible {
+  outline: 3px solid var(--marigold);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}
