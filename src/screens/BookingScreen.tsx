@@ -123,7 +123,7 @@ export function BookingConfirm({
 
       <div className="booking-card">
         <div className="confirm-item">
-          <Photo urls={item.photoUrls} title={item.title} className="confirm-photo" />
+          <Photo urls={item.photoUrls} title={item.title} category={item.category} className="confirm-photo" />
           <div>
             <h3>{item.title}</h3>
             <p className="confirm-owner">from {item.owner.displayName}</p>

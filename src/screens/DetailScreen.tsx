@@ -38,7 +38,7 @@ export function DetailScreen({
 
       <div className="detail-grid">
         <div className="detail-media">
-          <Photo urls={item.photoUrls} title={item.title} className="detail-photo" />
+          <Photo urls={item.photoUrls} title={item.title} category={item.category} className="detail-photo" />
           {item.photoUrls.length > 1 && (
             <div className="thumb-row">
               {item.photoUrls.slice(1).map((url, i) => (

@@ -18,7 +18,7 @@ export function ItemCard({ item, onOpen }: { item: Item; onOpen: (id: string) =>
       aria-label={`View ${item.title}`}
     >
       <div className="card-photo-wrap">
-        <Photo urls={item.photoUrls} title={item.title} className="card-photo" />
+        <Photo urls={item.photoUrls} title={item.title} category={item.category} className="card-photo" />
         <span className={`price-tag${free ? " price-tag-free" : ""}`}>{formatPriceShort(item.price)}</span>
         <StatusNote status={item.status} />
       </div>

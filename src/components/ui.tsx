@@ -7,6 +7,7 @@
 import type { ReactNode } from "react";
 import type { Category } from "../data/types.ts";
 import { categoryLabel } from "../lib/format.ts";
+import { CategoryIllustration } from "./CategoryIllustration.tsx";
 
 /* ---- Brand wordmark ---- */
 export function Logo({ onClick }: { onClick?: () => void }) {
@@ -76,21 +77,27 @@ export function Avatar({ name }: { name: string }) {
   );
 }
 
-/* ---- Item photo with graceful empty state ---- */
+/* ---- Item photo with graceful empty state ----
+ * When an item has no photo we show a clean, category-matched
+ * illustration rather than a random stock image. This keeps every
+ * tile honest (no baby on a drill) and never depends on an external
+ * image service, so nothing can break on the deployed site. ---- */
 export function Photo({
   urls,
   title,
+  category,
   className,
 }: {
   urls: string[];
   title: string;
+  category: Category;
   className?: string;
 }) {
   if (urls.length === 0) {
     return (
-      <div className={`photo photo-empty ${className ?? ""}`} role="img" aria-label={`No photo for ${title}`}>
-        <span aria-hidden="true">◈</span>
-        <small>No photo yet</small>
+      <div className={`photo photo-empty ${className ?? ""}`} role="img" aria-label={`${categoryLabel(category)} illustration for ${title}`}>
+        <CategoryIllustration category={category} />
+        <small>{categoryLabel(category)}</small>
       </div>
     );
   }

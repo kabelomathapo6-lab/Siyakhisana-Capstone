@@ -116,10 +116,17 @@
 .card-photo { width: 100%; height: 100%; object-fit: cover; }
 .photo-empty {
   width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: 6px; color: var(--muted); background: repeating-linear-gradient(135deg, var(--bone-dark), var(--bone-dark) 10px, #e5dfd3 10px, #e5dfd3 20px);
+  gap: 8px; color: var(--indigo-800);
+  background:
+    radial-gradient(circle at 30% 25%, rgba(245,166,35,.18), transparent 55%),
+    linear-gradient(150deg, var(--bone) 0%, var(--bone-dark) 100%);
 }
-.photo-empty span { font-size: 1.8rem; color: var(--marigold); }
-.photo-empty small { font-size: .74rem; letter-spacing: .04em; }
+.photo-empty svg { width: 46%; max-width: 92px; height: auto; color: var(--indigo-700); opacity: .9; }
+.photo-empty small {
+  font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 700;
+  color: var(--muted);
+}
+.detail-media .photo-empty svg { max-width: 130px; }
 .price-tag {
   position: absolute; bottom: 10px; left: 10px;
   background: var(--indigo-900); color: var(--white); font-weight: 700; font-size: .8rem;

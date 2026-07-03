@@ -1,7 +1,7 @@
 /* ============================================================
  * Mock data. Pretend this is the JSON a real API would return.
  * Notice the deliberately awkward reality in here:
- *  - some items have no photos
+ *  - items render as honest category illustrations (no mismatched stock photos)
  *  - some have no price (free)
  *  - some owners have no rating yet (null)
  *  - some items are "paused" and must not be bookable
@@ -21,7 +21,7 @@ export const ITEMS: Item[] = [
     title: "Cordless Drill (18V)",
     category: "power-tools",
     description: "Solid drill, two batteries, works for most home jobs.",
-    photoUrls: ["https://picsum.photos/seed/drill/600/400"],
+    photoUrls: [],
     price: { amountCents: 5000, period: "day" },
     owner: { id: "usr_a", displayName: "Naledi", rating: 4.8, ratingCount: 24, joinedISO: "2025-02-11" },
     distanceKm: 1.2,
@@ -45,7 +45,7 @@ export const ITEMS: Item[] = [
     title: "Pressure Washer",
     category: "outdoor",
     description: "Great for driveways and walls. Bring your own hose.",
-    photoUrls: ["https://picsum.photos/seed/washer/600/400", "https://picsum.photos/seed/washer2/600/400"],
+    photoUrls: [],
     price: { amountCents: 12000, period: "day" },
     owner: { id: "usr_c", displayName: "Fatima", rating: 4.2, ratingCount: 6, joinedISO: "2025-11-02" },
     distanceKm: 4.7,
@@ -57,7 +57,7 @@ export const ITEMS: Item[] = [
     title: "Stand Mixer",
     category: "kitchen",
     description: "For big baking days. Comes with whisk + dough hook.",
-    photoUrls: ["https://picsum.photos/seed/mixer/600/400"],
+    photoUrls: [],
     price: { amountCents: 8000, period: "day" },
     owner: { id: "usr_d", displayName: "Grace", rating: 5.0, ratingCount: 2, joinedISO: "2026-01-19" },
     distanceKm: 0.6,
@@ -69,7 +69,7 @@ export const ITEMS: Item[] = [
     title: "Folding Tables (x4)",
     category: "party",
     description: "Set of four trestle tables. Good for events.",
-    photoUrls: ["https://picsum.photos/seed/tables/600/400"],
+    photoUrls: [],
     price: { amountCents: 15000, period: "day" },
     owner: { id: "usr_e", displayName: "Themba", rating: 3.9, ratingCount: 11, joinedISO: "2024-09-14" },
     distanceKm: 8.1,
@@ -93,7 +93,7 @@ export const ITEMS: Item[] = [
     title: "Tile Cutter",
     category: "hand-tools",
     description: "Manual tile cutter, up to 600mm.",
-    photoUrls: ["https://picsum.photos/seed/tile/600/400"],
+    photoUrls: [],
     price: { amountCents: 3000, period: "day" },
     owner: { id: "usr_c", displayName: "Fatima", rating: 4.2, ratingCount: 6, joinedISO: "2025-11-02" },
     distanceKm: 4.7,
@@ -105,7 +105,7 @@ export const ITEMS: Item[] = [
     title: "Gazebo (3x3m)",
     category: "party",
     description: "Pop-up gazebo, white. One pole has tape on it, still fine.",
-    photoUrls: ["https://picsum.photos/seed/gazebo/600/400"],
+    photoUrls: [],
     price: { amountCents: 0, period: "day" },
     owner: { id: "usr_e", displayName: "Themba", rating: 3.9, ratingCount: 11, joinedISO: "2024-09-14" },
     distanceKm: null,
